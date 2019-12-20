@@ -5,7 +5,7 @@ def zap_started(zap, target):
     logging.debug("*********** zap_started hook")
     # Install the Python script engine as it's not installed by default
     response = zap.autoupdate.install_addon("jython")
-    logging.debug("*************** Installed add on - " + response)
+    logging.debug("*************** Installed Python script engine add on - " + response)
     # Load and enable script
     response = zap.script.load("add_header.py", "httpsender", "jython", "/zap/wrk/add_header.py")
     zap.script.enable("add_header.py")
