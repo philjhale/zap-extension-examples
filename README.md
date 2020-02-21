@@ -1,11 +1,6 @@
-# OWASP ZAP hooks example
+# ZAP extension examples
 
-This is an example of adding a HTTP header to all ZAP requests using a hook which loads a script.
+This repository is a playground for figuring out how to extend the functionality of [OWASP ZAP](https://www.zaproxy.org/), primarily when executed using Docker.
 
-
-Comand to execute ZAP using the `hooks.py` file.
-```
-docker run --rm -v $(pwd):/zap/wrk/:rw \
--t owasp/zap2docker-stable zap-baseline.py -d -t http://docker.for.mac.localhost:3000 \
---hook=/zap/wrk/hooks.py
-```
+* [Add header to all HTTP requests](add-request-header) using a hook
+* [Write URLs to file](write-urls-to-file) using a hook
